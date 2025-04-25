@@ -32,10 +32,10 @@ class WelcomeViewController: UIViewController {
     
     private lazy var welcomeLabel : UILabel = {
         let label = UILabel()
-        label.textColor = .white
+        label.textColor = UIColor(named: "gray84")
         label.textAlignment = .center
         label.numberOfLines = 2
-        label.font = .boldSystemFont(ofSize: 25)
+        label.font = UIFont(name: "Pretendard-Bold", size: 23)
         return label
     }()
     
@@ -46,12 +46,13 @@ class WelcomeViewController: UIViewController {
         button.backgroundColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1)
         button.layer.cornerRadius = 8
         button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont(name: "Pretendard-Medium", size: 14)
         return button
     }()
     
     private func setupconstraints(){
         NSLayoutConstraint.activate([
-            backToMainButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -66),
+            backToMainButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -70),
             backToMainButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
             backToMainButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
             backToMainButton.heightAnchor.constraint(equalToConstant: 52)
@@ -59,8 +60,8 @@ class WelcomeViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             welcomeLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 67),
-            welcomeLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 77),
-            welcomeLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -77)
+            welcomeLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+            
         ])
         
         NSLayoutConstraint.activate([
