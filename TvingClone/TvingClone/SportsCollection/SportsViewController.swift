@@ -1,28 +1,19 @@
 //
-//  Top.swift
+//  SportsViewController.swift
 //  TvingClone
 //
-//  Created by hyunwoo on 5/1/25.
+//  Created by hyunwoo on 5/2/25.
 //
-
 import UIKit
 import SnapKit
 
-class TopViewController: UIViewController {
+class SportsViewController: UIViewController {
     
-    final let InterItemSpacing: CGFloat = 30
-    final let cellHeight: CGFloat = 146
-    final let cellWidth: CGFloat = 150
+    final let InterItemSpacing: CGFloat = 10
+    final let cellHeight: CGFloat = 45
+    final let cellWidth: CGFloat = 90
     
-    private var itemData = TopModel.dummy()
-    
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "오늘의 티빙 TOP 20"
-        label.textColor = .white
-        label.font = UIFont(name: "Pretendard-Bold", size: 15)
-        return label
-    }()
+    private var sportsData = SportsData.dummy()
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -34,45 +25,32 @@ class TopViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.view.backgroundColor = .black
-        
         setLayout()
         register()
         setDelegate()
     }
-    
-    private func setLayout() {
-        [titleLabel, collectionView].forEach {
+    private func setLayout(){
+        [collectionView].forEach {
             view.addSubview($0)
         }
-        
-        titleLabel.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(16)
-            $0.top.equalToSuperview().offset(15)
-        }
-        
         collectionView.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(15)
             $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(titleLabel.snp.bottom).offset(15)
             $0.height.equalTo(cellHeight)
         }
     }
-    
     private func register() {
         collectionView.register(
-            TopCollectionViewCell.self,
-            forCellWithReuseIdentifier: TopCollectionViewCell.identifier
-        )
+            SportsCollectionViewCell.self,
+            forCellWithReuseIdentifier: SportsCollectionViewCell.identifier)
     }
-    
-    private func setDelegate() {
+    private func setDelegate(){
         collectionView.delegate = self
         collectionView.dataSource = self
     }
 }
-
-extension TopViewController: UICollectionViewDelegateFlowLayout {
+extension SportsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: cellWidth, height: cellHeight)
@@ -84,16 +62,16 @@ extension TopViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension TopViewController: UICollectionViewDataSource {
+extension SportsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return itemData.count
+        return sportsData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopCollectionViewCell.identifier, for: indexPath) as? TopCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SportsCollectionViewCell.identifier, for: indexPath) as? SportsCollectionViewCell else {
                 return UICollectionViewCell()
             }
-        cell.dataBind(itemData[indexPath.item])
+        cell.dataBind(sportsData[indexPath.item])
         return cell
     }
 }

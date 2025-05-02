@@ -53,10 +53,10 @@ class PopularViewController: UIViewController{
         }
         titleLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(16)
-            $0.top.equalToSuperview().offset(80)
+            $0.top.equalToSuperview().offset(15)
         }
         moreLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(80)
+            $0.top.equalToSuperview().offset(15)
             $0.trailing.equalToSuperview().offset(-16)
         }
         

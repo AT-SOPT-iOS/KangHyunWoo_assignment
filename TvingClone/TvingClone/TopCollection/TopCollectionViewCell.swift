@@ -18,6 +18,7 @@ class TopCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.textColor = .white
         label.font = UIFont(name: "Pretendard-Bold", size: 50)
+        label.transform = CGAffineTransform(rotationAngle: 0.05)
         label.textAlignment = .center
         return label
     }()
