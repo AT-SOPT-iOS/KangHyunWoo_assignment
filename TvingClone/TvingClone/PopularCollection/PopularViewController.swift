@@ -31,6 +31,15 @@ class PopularViewController: UIViewController{
         return label
     }()
     
+//    private let moreButton : UIButton = {
+//        let button = UIButton()
+//        button.setTitle("더보기", for: .normal)
+//        button.backgroundColor = UIColor(named: "gray2")
+//        button.titleLabel?.font = UIFont(name : "Pretendard-Medium", size:15)
+//        button.addTarget(self, action: #selector(morebuttonTap), for: .touchUpInside)
+//        return button
+//    }()
+    
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -38,6 +47,15 @@ class PopularViewController: UIViewController{
         collectionView.backgroundColor = .black
         return collectionView
     } ()
+    
+//    private func morebuttonTap(){
+//        let movieViewController = MovieViewController()
+//        self.navigationController?.pushViewController(MovieViewController, animated: true)
+//    }
+//    @objc
+//    private func moreButtonTap(){
+//        morebuttonTap()
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
