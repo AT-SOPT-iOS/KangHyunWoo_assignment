@@ -31,6 +31,7 @@ class PopularViewController: UIViewController{
         return label
     }()
     
+    
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -38,6 +39,7 @@ class PopularViewController: UIViewController{
         collectionView.backgroundColor = .black
         return collectionView
     } ()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
