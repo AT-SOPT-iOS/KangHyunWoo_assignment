@@ -27,7 +27,7 @@ struct FavoriteView: View {
                 .padding(.horizontal,16)
             }
         }
-        .frame(height: 45)
+        .frame(height: 130)
     }
 }
 
