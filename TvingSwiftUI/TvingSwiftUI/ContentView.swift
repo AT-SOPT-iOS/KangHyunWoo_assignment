@@ -29,9 +29,25 @@ struct ContentView: View {
             }
             .padding(.top, 25)
             .background(Color.black)
+            HStack(spacing: 24) {
+                    Text("홈").foregroundColor(.white).fontWeight(.bold)
+                    Text("드라마").foregroundColor(.white)
+                    Text("예능").foregroundColor(.white)
+                    Text("영화").foregroundColor(.white)
+                    Text("스포츠").foregroundColor(.white)
+                    Text("뉴스").foregroundColor(.white)
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 8)
+                .background(Color.black)
             
             ScrollView {
                 VStack(spacing: 30) {
+                    Image("main")
+                            .resizable()
+                            .frame(width: 375, height: 400)
+                            .padding(.bottom, 8)
+                    
                     TopView(tops: topDummy)
                     LiveView(lives: liveDummy)
                     LiveMovieView(livemovies: livemoiveDummy)
