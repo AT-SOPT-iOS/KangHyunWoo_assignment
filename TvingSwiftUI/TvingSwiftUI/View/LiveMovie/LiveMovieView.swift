@@ -15,7 +15,7 @@ struct LiveMovieView: View {
                 Text("실시간 인기 영화")
                     .font(.subheadline)
                     .bold()
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                     .padding(.leading, 16)
                 
                 Spacer()

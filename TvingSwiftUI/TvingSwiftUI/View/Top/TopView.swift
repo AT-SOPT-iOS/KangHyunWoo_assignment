@@ -14,7 +14,7 @@ struct TopView: View {
             Text("오늘의 티빙 TOP 20")
                 .font(.headline)
                 .bold()
-                .foregroundColor(.black)
+                .foregroundColor(.white)
                 .padding(.leading, 12)
             
             ScrollView(.horizontal, showsIndicators: false){
@@ -26,7 +26,7 @@ struct TopView: View {
                 .padding(.horizontal,16)
             }
         }
-        .frame(height: 130)
+        .frame(height: 170)
     }
 }
 

@@ -20,13 +20,13 @@ struct LiveCellView: View {
                 Text(live.rank)
                     .italic()
                     .font(.title3)
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                     .bold()
                 
                 VStack(alignment: .leading, spacing: 2) {
                     Text(live.broadcast)
                         .bold()
-                        .foregroundColor(.black)
+                        .foregroundColor(.white)
                     
                     Text(live.name)
                         .foregroundColor(.gray2)

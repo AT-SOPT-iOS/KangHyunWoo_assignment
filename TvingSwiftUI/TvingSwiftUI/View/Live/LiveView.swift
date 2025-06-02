@@ -15,7 +15,7 @@ struct LiveView: View {
                 Text("실시간 인기 Live")
                     .font(.subheadline)
                     .bold()
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                     .padding(.leading, 16)
                 
                 Spacer()
@@ -35,7 +35,7 @@ struct LiveView: View {
                 .padding(.horizontal,16)
             }
         }
-        .frame(height: 190)
+        .frame(height: 150)
     }
 }
 

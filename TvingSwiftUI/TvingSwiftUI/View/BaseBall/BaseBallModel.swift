@@ -11,7 +11,7 @@ struct BaseBallModel: Identifiable {
     let imageName : String
 }
 
-let BasBallDummy: [BaseBallModel] = [
+let baseballDummy: [BaseBallModel] = [
     BaseBallModel(imageName: "baseball1"),
     BaseBallModel(imageName: "baseball2"),
     BaseBallModel(imageName: "baseball3"),

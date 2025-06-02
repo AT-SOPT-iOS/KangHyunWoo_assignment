@@ -23,5 +23,5 @@ struct BaseBallView: View {
 }
 
 #Preview {
-    BaseBallView(balls: BasBallDummy)
+    BaseBallView(balls: baseballDummy)
 }

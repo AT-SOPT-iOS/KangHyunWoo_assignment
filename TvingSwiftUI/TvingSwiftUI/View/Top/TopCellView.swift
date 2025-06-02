@@ -16,7 +16,7 @@ struct TopCellView: View {
                 Text(top.rank)
                     .font(.system(size: 40, weight: .bold))
                     .italic()
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                     .shadow(color: .gray.opacity(0.5), radius: 2, x: 0, y: 4)
             }
             

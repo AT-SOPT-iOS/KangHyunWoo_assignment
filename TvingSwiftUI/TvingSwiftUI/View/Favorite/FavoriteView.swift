@@ -15,7 +15,7 @@ struct FavoriteView: View {
             Text("김가현PD의 인생작 TOP 5")
                 .font(.subheadline)
                 .bold()
-                .foregroundColor(.black)
+                .foregroundColor(.white)
                 .padding(.leading, 16)
             
             ScrollView(.horizontal, showsIndicators: false){
