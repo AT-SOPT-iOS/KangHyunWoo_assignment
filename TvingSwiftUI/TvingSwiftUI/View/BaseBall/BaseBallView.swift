@@ -10,7 +10,7 @@ struct BaseBallView: View {
     let balls: [BaseBallModel]
     
     var body: some View {
-        ScrollView(.horizontal){
+        ScrollView(.horizontal, showsIndicators: false){
             HStack(spacing: 12){
                 ForEach(balls) { ball in
                     BaseBallCellView(ball: ball)

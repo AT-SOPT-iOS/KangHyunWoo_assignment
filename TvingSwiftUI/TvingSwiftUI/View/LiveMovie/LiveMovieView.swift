@@ -26,7 +26,7 @@ struct LiveMovieView: View {
                     .padding(.trailing, 16)
             }
             
-            ScrollView(.horizontal){
+            ScrollView(.horizontal, showsIndicators: false){
                 HStack(spacing: 5){
                     ForEach(livemovies) { livemovie in
                         LiveMovieCellView(livemovie: livemovie)

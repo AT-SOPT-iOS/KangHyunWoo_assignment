@@ -18,7 +18,7 @@ struct FavoriteView: View {
                 .foregroundColor(.black)
                 .padding(.leading, 16)
             
-            ScrollView(.horizontal){
+            ScrollView(.horizontal, showsIndicators: false){
                 HStack(spacing: 5){
                     ForEach(favorites) { favorite in
                         FavoriteCellView(favorite: favorite)

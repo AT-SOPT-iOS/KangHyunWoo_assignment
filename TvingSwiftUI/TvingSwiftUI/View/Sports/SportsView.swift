@@ -10,7 +10,7 @@ struct SportsView: View {
     let sports: [SportsModel]
     
     var body: some View {
-        ScrollView(.horizontal){
+        ScrollView(.horizontal, showsIndicators: false){
             HStack(spacing: 5){
                 ForEach(sports) { sport in
                     SportsCellView(sport: sport)
