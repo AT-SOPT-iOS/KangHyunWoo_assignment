@@ -15,5 +15,5 @@ let livemoiveDummy: [LiveMovieModel] = [
     LiveMovieModel(imageName: "top1"),
     LiveMovieModel(imageName: "top2"),
     LiveMovieModel(imageName: "top3"),
-    LiveMovieModel(imageName: "top4"),
+    LiveMovieModel(imageName: "top4")
 ]
