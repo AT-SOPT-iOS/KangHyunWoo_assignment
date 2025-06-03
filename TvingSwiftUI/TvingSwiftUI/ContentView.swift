@@ -54,6 +54,16 @@ struct ContentView: View {
                     BaseBallView(balls: baseballDummy)
                     SportsView(sports: sportsDummy)
                     FavoriteView(favorites: favoriteDummy)
+                    
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("고객문의 · 이용약관 ·")
+                        Text("사업자정보 · 인재채용")
+                    }
+                        .font(.footnote)
+                        .foregroundColor(.gray2)
+                        .padding(.horizontal, 16)
+                        .padding(.bottom, 30)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
             .background(Color.black)
